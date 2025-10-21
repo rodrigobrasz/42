@@ -6,9 +6,15 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:02:19 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/20 12:53:24 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/10/21 12:00:09 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}
