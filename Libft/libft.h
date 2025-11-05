@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:20:09 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/04 19:32:33 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/05 17:05:33 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,14 @@
 # include <strings.h>
 # include <ctype.h>
 # include <string.h>
+
+
+//membro sao as variaveis que eu deficno dentro dos strucht
+typedef struct s_list
+{
+	void			*content;//membro
+	struct s_list	*next;//membro
+}					t_list;
 
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
@@ -52,4 +60,44 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(const char *s);
 
+//BUNUS:
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 #endif
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+typedef struct s_nomes
+{
+	char nome;
+	int idade;
+	float altura;
+} pessoas;
+
+int main(void)
+{
+	pessoas *p1;
+
+	ft_strcpy(nome.p1, "rodrigo");
+	idade.p1 = 30;
+	altura.p1 = 1.80;
+} */
