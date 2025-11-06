@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 12:55:10 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/03 13:03:22 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/06 20:04:02 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,12 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+
+/* int main(void)
+{
+	char	a[] = "avanti palestra";
+	int	i = 1;
+	ft_putstr_fd(a, i);
+	write(1, "\n", 1);
+	return 0;
+} */

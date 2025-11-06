@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:02:41 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/24 15:43:22 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/10/24 18:33:49 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (c + 32);
-	return (0);
+	return (c);
 }

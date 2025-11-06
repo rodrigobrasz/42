@@ -6,7 +6,13 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:02:16 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/21 11:31:59 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/10/23 13:41:37 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, '\0', n);
+}

@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 11:08:38 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/28 12:18:39 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/06 19:54:31 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t			i;
+	size_t	i;
 	char	*dest;
 
 	i = 0;
@@ -29,11 +29,11 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-
+/* 
 int	main(void)
 {
 	char a[] = "+_dsadas231312dadas123_)";
 
 	printf("%s", ft_strdup(a));
 	return 0;
-}
+} */

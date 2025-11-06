@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:02:34 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/27 13:24:56 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/06 19:57:28 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t len_dest;
-	size_t len_src;
-	size_t i;
+	size_t			len_dest;
+	size_t			len_src;
+	size_t			i;
 	unsigned int	res;
 
 	len_src = ft_strlen(src);
@@ -44,7 +44,13 @@ int	main(void)
 {
 	char dest[] = "Avanti";
 	char source[] = " Palestra!";
+
+	printf("my func:\n");
 	printf("%zu\n", ft_strlcat (dest, source, 30));
 	printf("%s\n", dest);
+
+	printf("original func:\n");
+	printf("zu\n", strlcat(dest, source, 30));
+	printf("zu\n", dest);
 	return 0;
 }

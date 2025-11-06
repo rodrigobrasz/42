@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 11:08:41 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/28 13:10:10 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/06 19:47:23 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*temp;
-	size_t			i;
+	void	*dest;
 
-	i = 0;
-	temp = malloc(nmemb * size);
-	if (!temp)
+	if (!nmemb || !size)
 		return (NULL);
-	while (i < nmemb * size)
-	{
-		temp[i] = 0;
-		i++;
-	}
-	return(temp);
+	if (nmemb > SIZE_MAX / size)
+	dest = malloc(nmemb * size);
+	if(!dest)
+	return (NULL);
+	ft_bzero(dest, nmemb * size);
+	return (dest);
 }

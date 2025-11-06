@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:02:30 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/23 17:53:29 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:34:16 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	unsigned char	*temp_dest;
 	unsigned char	*temp_src;
 
-	if (!dest && !src)
-		return (NULL);
 	temp_src = (unsigned char *) src;
 	temp_dest = (unsigned char *) dest;
 	counter = 0;

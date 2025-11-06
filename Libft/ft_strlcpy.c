@@ -6,13 +6,13 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:02:35 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/27 13:36:33 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:09:12 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 
@@ -30,6 +30,7 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size)
 	return (i);
 }
 
+/* 
 int main() 
 {
     char src[] = "rodrigo";
@@ -42,4 +43,4 @@ int main()
     printf("%d\n", longueur);
 
     return 0;
-}
+} */

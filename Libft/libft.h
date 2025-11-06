@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:20:09 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/05 17:05:33 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/06 19:45:05 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 # include <strings.h>
 # include <ctype.h>
 # include <string.h>
+# include <stdint.h>
 
 
-//membro sao as variaveis que eu deficno dentro dos strucht
 typedef struct s_list
 {
-	void			*content;//membro
-	struct s_list	*next;//membro
+	void			*content;
+	struct s_list	*next;
 }					t_list;
 
 int		ft_atoi(const char *str);
