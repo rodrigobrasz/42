@@ -3,39 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 17:05:40 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/06 19:33:37 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/07 19:10:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_words(char *s, int c);
-static void		*ft_freesplit(char **s, size_t j);
-static char		**ft_fill_split(char **split);
-
-static size_t	ft_count_words(char *s, int c)
+static char		*fillword(cosnt char *s, char c)
 {
-	//1 = o size_t e um tipo de 64 bits, ou seja ele consegue armazenar valores muito grandes; 
-	size_t	counter; //conta conta o "argc";
-	//o size_t e bom para essa funcao porque a quantidade de palavras pode ser 
-	//relativamente grande (dependendo da entrada)
-	size_t	i; // i conta o index de cada array;
-	//aqui o index e usado para percorrer a string, por isso eu preciso garantir que ele nao seja
-	//um numero negativo, e pelo size_t ser um tipo que armazena 
-	//grandes valores, garante que nao de overflow no index
+	int	i;
 
 	i = 0;
-	counter = 0;
-	while (s[i])//inicio loop 
+	while(s[i])
 	{
-		while (s[i] && s[i] == c)//enquanto eu estiver percorrendo essa primera string e no index 
-								//e se ela for igual a delimitador avance pra proximo;
+		while (s[i] && s[i] != c)
+				i++;
+		return (ft_substr(s, 0, i));
+	}
+}
+static size_t	ft_count_words(char *s, int c)
+{
+	size_t	counter;
+	size_t	i;
+	i = 0;
+	counter = 0;
+	if (s == NULL)
+		return (0);
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
 			i++;
-		if (s[i] && s[i] != c)//aqui eu vou comecar a contar quantas palavras tem no array (argc)
-							//caso seja ele encontre uma diferente ele entra no laco de adiciona +1 para o counter;
+		if (s[i] && s[i] != c)
 		{
 			counter++;
 			while(s[i] && s[i] != c)
@@ -43,6 +44,19 @@ static size_t	ft_count_words(char *s, int c)
 		}
 	}
 	return (counter);
+}
+static void		*ft_freesplit(char **s);
+{
+	size_t	i;
+
+	if(!split)
+		return;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split[i]);
 }
 
 
