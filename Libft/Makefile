@@ -6,7 +6,7 @@
 #    By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 12:02:24 by rodcaeta          #+#    #+#              #
-#    Updated: 2025/11/05 14:33:24 by rodcaeta         ###   ########.fr        #
+#    Updated: 2025/11/08 16:39:00 by rodcaeta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ FILES = ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_atoi.c ft_strlen.
 		ft_tolower.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strnstr.c ft_memcmp.c \
 		ft_memchr.c ft_strlcpy.c ft_strdup.c ft_calloc.c ft_putchar_fd.c ft_putstr_fd.c \
 		ft_putendl_fd.c ft_substr.c ft_strjoin.c ft_itoa.c ft_strtrim.c ft_putnbr_fd.c \
-		ft_strmapi.c
+		ft_strmapi.c ft_split.c ft_striteri.c 
 
 BFILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone\
 		ft_lstclear.c ft_lstiter.c ft_lstmap.c 

@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:02:34 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/06 19:57:28 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/08 16:33:02 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (res);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char dest[] = "Avanti";
 	char source[] = " Palestra!";
@@ -53,4 +53,4 @@ int	main(void)
 	printf("zu\n", strlcat(dest, source, 30));
 	printf("zu\n", dest);
 	return 0;
-}
+} */

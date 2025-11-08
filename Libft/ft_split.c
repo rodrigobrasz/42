@@ -3,35 +3,50 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 17:05:40 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/07 19:10:31 by marvin           ###   ########.fr       */
+/*   Updated: 2025/11/08 18:02:03 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*fillword(cosnt char *s, char c)
+static void	*ft_freesplit(char **s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+	{
+		free (s[i]);
+		i++;
+	}
+	free (s);
+	return (NULL);
+}
+
+static char	*ft_fill_split(const char *s, char c)
 {
 	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		while (s[i] && s[i] != c)
-				i++;
+			i++;
 		return (ft_substr(s, 0, i));
 	}
+	return (NULL);
 }
-static size_t	ft_count_words(char *s, int c)
+
+static size_t	ft_count_words(const char *s, int c)
 {
 	size_t	counter;
 	size_t	i;
+
 	i = 0;
 	counter = 0;
-	if (s == NULL)
-		return (0);
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
@@ -39,26 +54,38 @@ static size_t	ft_count_words(char *s, int c)
 		if (s[i] && s[i] != c)
 		{
 			counter++;
-			while(s[i] && s[i] != c)
+			while (s[i] && s[i] != c)
 				i++;
 		}
 	}
 	return (counter);
 }
-static void		*ft_freesplit(char **s);
+
+char	**ft_split(char const *s, char c)
 {
-	size_t	i;
+	char	**result;
+	int		word;
+	int		i;
+	int		j;
 
-	if(!split)
-		return;
-	while (split[i])
+	i = 0;
+	j = 0;
+	if (!s)
+		return (NULL);
+	word = ft_count_words(s, c);
+	result = malloc(sizeof(char *) * (word + 1));
+	if (!result)
+		return (NULL);
+	while (i < word)
 	{
-		free(split[i]);
-		i++;
+		while (s[j] && s[j] == c)
+			j++;
+		result[i] = ft_fill_split(s + j, c);
+		if (!result)
+			return (ft_freesplit(result), NULL);
+		while (s[j] && s[j] != c)
+			j++;
 	}
-	free(split[i]);
+	result[i] = NULL;
+	return (result);
 }
-
-
-
-char	**ft_split(char const *s, char c);
