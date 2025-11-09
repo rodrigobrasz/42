@@ -6,7 +6,7 @@
 /*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 17:05:40 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/09 14:08:09 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/09 14:24:15 by rodcaeta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ char	**ft_split(char const *str, char delim)
 	char	**split;
 	const char	*str = "Sphynx of Black Quartz, Judge My Vow!";
 	const char	*str2 = "                Sphynx of Black Quartz, Judge My Vow!";
-	const char	*str3 = "of  Quartz, Judge My Vow            !               ";
+	const char	*str3 = " of  Quartz, Judge My Vow            !               ";
 
 	split = ft_split(str, ' ');
 	split = ft_split(str2, ' ');
