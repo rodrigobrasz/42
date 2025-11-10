@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 13:57:03 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/03 16:25:20 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/10 15:11:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < len && s[start + i])
+	while (i < len)
 	{
 		str[i] = s[start + i];
 		i++;
@@ -39,21 +39,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-/* int main(void)
-{
-	printf("%s", ft_substr("AVANTI PALESTRA", 9 , 20));
+/*int main(void)
+{	
+	char	a[] = "AVANTE PALESTRA";
+
+	printf("%s\n", ft_substr(a, 7, 20));
 	return 0;
 }
-
-
-AVANTI PALESTRA [16]
-start = 9;
+s = [A] [V] [A] [N] [T] [E] [] [P] [A] [L] [E] [S] [T] [R] [A] [\0]; = 16
+start = 7;
 len = 20;
 
-star + len = 29
-len = 16 - 9;
-len = 7;
+20 + 7 = 27;
 
-start = 9;
-len = 7;
-slen = 16 */
+len = 16 - 7;
+len = 9;*/

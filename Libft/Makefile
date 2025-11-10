@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 12:02:24 by rodcaeta          #+#    #+#              #
-#    Updated: 2025/11/08 16:39:00 by rodcaeta         ###   ########.fr        #
+#    Updated: 2025/11/10 22:33:55 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ FILES = ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_atoi.c ft_strlen.
 		ft_putendl_fd.c ft_substr.c ft_strjoin.c ft_itoa.c ft_strtrim.c ft_putnbr_fd.c \
 		ft_strmapi.c ft_split.c ft_striteri.c 
 
-BFILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone\
+BFILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c\
 		ft_lstclear.c ft_lstiter.c ft_lstmap.c 
 
 OBJS = $(patsubst %.c, %.o, $(FILES))
@@ -40,21 +40,52 @@ RESET = \033[0m #
 
 all : $(NAME)
 
+bonus : .bonus 
+
+.bonus : $(BOBJS)
+	@echo "$(GREEN) Adding Bonus OBJECTS: $(RESET)$(NAME)$(RESET)"
+	@ar rcs $(NAME) $(BOBJS)
+	@touch .bonus
+	
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
-	@echo "$(GREEN)Building library:$(RESET) $(BLUE)$(NAME)$(RESET)"
+	@echo "$(BLUE)"   
+	@echo	"██╗     ██╗██████╗ ██████╗  █████╗ ██████╗ ██╗   ██╗    ██╗  ██╗ █████╗ ███████╗"              
+	@echo	"██║     ██║██╔══██╗██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝    ██║  ██║██╔══██╗██╔════╝"                 
+	@echo	"██║     ██║██████╔╝██████╔╝███████║██████╔╝ ╚████╔╝     ███████║███████║███████╗"                 
+	@echo	"██║     ██║██╔══██╗██╔══██╗██╔══██║██╔══██╗  ╚██╔╝      ██╔══██║██╔══██║╚════██║"                 
+	@echo	"███████╗██║██████╔╝██║  ██║██║  ██║██║  ██║   ██║       ██║  ██║██║  ██║███████║"                 
+	@echo	"╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝"                 
+	@echo	"██████╗ ███████╗███████╗███╗   ██╗     ██████╗██████╗ ███████╗ █████╗ ████████╗███████╗██████╗ ██╗"
+	@echo	"██╔══██╗██╔════╝██╔════╝████╗  ██║    ██╔════╝██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗██║"
+	@echo	"██████╔╝█████╗  █████╗  ██╔██╗ ██║    ██║     ██████╔╝█████╗  ███████║   ██║   █████╗  ██║  ██║██║"
+	@echo	"██╔══██╗██╔══╝  ██╔══╝  ██║╚██╗██║    ██║     ██╔══██╗██╔══╝  ██╔══██║   ██║   ██╔══╝  ██║  ██║╚═╝"
+	@echo	"██████╔╝███████╗███████╗██║ ╚████║    ╚██████╗██║  ██║███████╗██║  ██║   ██║   ███████╗██████╔╝██╗"
+	@echo	"╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═══╝     ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝ ╚═╝$(RESET)"
 
 %.o : %.c
 	@echo "$(YELLOW)Compiling:$(RESET) $(BLUE)$<$(RESET)"
 	@$(CC) $(FLAGS) -c -I. $< -o $@
 
 clean: 
-	@$(RM) $(OBJS) 
+	@$(RM) $(OBJS) $(BOBJS)
 	@echo "$(RED)Deleted all your Objects files.$(RESET)"
+
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "$(RED)Your Libft.a has been Deleted.$(RESET)"
+	@echo "$(RESET)"
+	@echo			⠀⠀⠀⠀⠀⠀⠀"⢀⣠⣤⣶⣶⣶⣶⣶⣤⣄⡀"⠀⠀⠀⠀⠀⠀⠀⠀⠀
+	@echo		⠀⠀⠀⠀⠀	"⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⡀"⠀⠀⠀⠀⠀
+	@echo		⠀⠀⠀"⣠⣴⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⣵⣄"⠀⠀⠀
+	@echo		⠀⠀"⢾⣻⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⡀"⠀
+	@echo		⠀"⠸⣽⣻⠃⣿⡿⠋⣉⠛⣿⣿⣿⣿⣿⣿⣿⣿⣏⡟⠉⡉⢻⣿⡌⣿⣳⡥"⠀
+	@echo		⠀"⢜⣳⡟⢸⣿⣷⣄⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣠⣼⣿⣇⢸⢧⢣"⠀
+	@echo		⠀"⠨⢳⠇⣸⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⠀⡟⢆"⠀
+	@echo		⠀⠀"⠈⠀⣾⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣽⣿⣿⠐⠈"⠀⠀
+	@echo		⠀"⢀⣀⣼⣷⣭⣛⣯⡝⠿⢿⣛⣋⣤⣤⣀⣉⣛⣻⡿⢟⣵⣟⣯⣶⣿⣄⡀"⠀
+	@echo		"⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣾⣶⣶⣴⣾⣿⣿⣿⣿⣿⣿⢿⣿⣿⣧"
+	@echo		"⣿⣿⣿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⡿"
 
 cclean: 
 	@$(EXECS)

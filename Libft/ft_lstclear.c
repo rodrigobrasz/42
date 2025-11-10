@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 20:26:59 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/09 14:47:35 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/10 21:52:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	del(*lst);
 	free (lst);
 }
-
-/* int	recursive_add(int num, int goal)
-{
-    if (num == goal)
-		return (num);
- 	return (recursive_add(num + 1, goal));
-}
-
-int main(void)
-{
-	int	objective;
-	objective = recursive_add(3, 9);
-	objective = objective;
-} */

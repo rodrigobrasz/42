@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:02:43 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/10/24 15:43:37 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:08:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,12 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
+
+/*int	main(void)
+{
+	char c;
+
+	c = 'r';
+	printf("toupper = %c\n", ft_toupper(c));
+	return 0;
+}*/

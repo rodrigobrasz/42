@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodcaeta <rodcaeta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 17:05:40 by rodcaeta          #+#    #+#             */
-/*   Updated: 2025/11/09 14:24:15 by rodcaeta         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:10:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ char	**ft_split(char const *str, char delim)
 	return (result);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	char	**split;
 	const char	*str = "Sphynx of Black Quartz, Judge My Vow!";
@@ -102,4 +102,4 @@ char	**ft_split(char const *str, char delim)
 	split = ft_split(str3, ' ');
 	(void) split;
 	return (0);
-} */
+}
